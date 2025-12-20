@@ -1,0 +1,9 @@
+week5
+data
+
+.DS_Store
+
+.vscode/
+
+__pycache__/
+*.pyc
