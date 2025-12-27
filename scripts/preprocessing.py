@@ -7,12 +7,7 @@ import pandas as pd
 class Preprocessor:
 
     def __init__(self, df: pd.DataFrame):
-        """
-        Initialize the preprocessor with a dataframe.
-
-        Args:
-            df (pd.DataFrame): Input dataframe
-        """
+        
         self.df = df.copy()
 
     def remove_duplicates(
