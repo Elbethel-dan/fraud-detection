@@ -8,3 +8,5 @@ settings.json
 
 __pycache__/
 *.pyc
+
+models/
