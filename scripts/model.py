@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
-
+import os
+import joblib
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import StratifiedKFold, GridSearchCV
@@ -115,6 +116,9 @@ def run_modeling_pipeline(X_train, X_test, y_train, y_test):
         "test_metrics": evaluate_model(y_test, rf_pred, rf_prob),
         "cv_metrics": cross_validate_model(rf_model, X_train, y_train)
     }
+     # ✅ SAVE MODEL 
+    os.makedirs("models", exist_ok=True)
+    joblib.dump(rf_model, "models/random_forest_fraud_model.pkl")
 
     return results
 
